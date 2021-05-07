@@ -1,3 +1,6 @@
+[![Open Source](https://img.shields.io/bower/l/bootstrap)](https://opensource.org/)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
+
 # solid-rest-api
 - Una API Rest simples utilizando Typescript y principios de S.O.L.I.D, fue configurado Jest y Eslint para validación de código y pruebas unitarias.
 
