@@ -23,7 +23,7 @@ export class CreateUserUseCase {
     user.password = await this.encryptPassword.encrypt(user.password)
 
     await this.usersRepository.save(user)
-    await this.mailProvider.sendMail({
+    /* await this.mailProvider.sendMail({
       to: {
         name: data.name,
         email: data.email
@@ -34,6 +34,6 @@ export class CreateUserUseCase {
       },
       subject: 'Bienvenido a la plataforma',
       body: '<p>Ya estás habilitado en nuestra plataforma ! </p>'
-    })
+    }) */
   }
 }

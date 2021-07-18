@@ -6,5 +6,5 @@ export interface IUserRepository {
     findById(id: string): Promise<IUser>
     save(user: IUser): Promise<any>
     delete(user: string): Promise<IUser>
-    update(user: IUser): Promise<IUser>
+    update(id:string, user: IUser): Promise<IUser>
 }

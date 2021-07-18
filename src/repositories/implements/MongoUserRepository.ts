@@ -20,8 +20,8 @@ export class MongoUserRepository implements IUserRepository {
     return await UserSchema.findByIdAndRemove(user)
   }
 
-  async update (user: IUser): Promise<IUser> {
-    return await UserSchema.findByIdAndUpdate(user._id,
+  async update (id: string, user: IUser): Promise<IUser> {
+    return await UserSchema.findByIdAndUpdate(id,
       {
         name: user.name
       })

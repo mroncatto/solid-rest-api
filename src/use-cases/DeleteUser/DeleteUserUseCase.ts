@@ -6,9 +6,9 @@ export class DeleteUserUseCase {
   ) {}
 
   async execute (data: string) {
-    const userAlreadyExists = await this.usersRepository.findById(data)
+    const userExists = await this.usersRepository.findById(data)
 
-    if (!userAlreadyExists) {
+    if (!userExists) {
       throw new Error('Usuario no existe!')
     }
 

@@ -8,16 +8,15 @@ export class UpdateUserController {
 
   async handle (request: Request, response: Response): Promise<Response> {
     const { _id, name, email, password } = request.body
+    const id = request.params.id
 
     try {
-      await this.updateUserUseCase.execute({
+      await this.updateUserUseCase.execute(id, {
         _id,
         name,
         email,
         password
       }).then((rs) => {
-        console.log(rs)
-
         if (rs === null) {
           return response.status(400).json({
             error: 'Error al actualizar usuario!'
